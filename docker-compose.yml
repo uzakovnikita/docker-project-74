@@ -1,0 +1,8 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.production
+    command: make test
+    image: nikitauzakov/docker-project-74
+  

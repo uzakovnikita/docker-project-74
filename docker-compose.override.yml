@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    extends:
+      file: docker-compose.yml
+      service: app
+    ports:
+      - 8080:8080
+    command: make dev
+    image: nikitauzakov/docker-project-74-dev
+    volumes:
+      - ./app:/app
